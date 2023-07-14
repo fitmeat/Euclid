@@ -82,10 +82,10 @@ body {
 }
 
 .container {
-    width: 100%;
-    width: 1770px;
+    max-width: 1770px;
     margin: 0 75px;
     padding: 0 15px;
+    width: 100%;
 }
 
 .section-title {
@@ -136,6 +136,49 @@ body {
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    transition: border-bottom 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+}
+
+.item__link:focus {
+    outline: 2px solid #F90;
+    outline-offset: 5px;
+}
+
+.item__link:hover {
+    border-bottom: 2px solid #F90;
+}
+
+.item__link:active {
+    color: #E1670E;
+    border-bottom: 2px solid #E1670E;
+    outline: none;
+}
+
+.nav__search__svg {
+    fill: transparent;
+    stroke-width: 2px;
+    stroke: #000;
+    transition: stroke 0.3s ease-in-out;
+}
+
+.nav__search:focus {
+    outline: 2px solid #f90;
+    outline-offset: 2px;
+}
+
+.nav__search:hover .nav__search__svg {
+    stroke: rgba(255, 153, 0, 1);
+}
+
+.nav__search:active {
+    outline: none;
+}
+
+.nav__search:active .nav__search__svg {
+    fill: transparent;
+    stroke-width: 2px;
+    stroke: #000;
 }
 
 /* start */
@@ -144,6 +187,7 @@ body {
 }
 
 .start__wrapper {
+    width: 1770px;
     min-height: 620px;
     padding-left: 80px;
     padding-top: 100px;
@@ -175,6 +219,19 @@ body {
 
 .start__btn {
     padding: 25px 39px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.start__btn:focus {
+    background-color: #FFB84D;
+}
+
+.start__btn:hover {
+    background-color: #FFB84D;
+}
+
+.stages__btn:active {
+    background: #E1670E;
 }
 
 /* about-us */
@@ -229,7 +286,7 @@ body {
     line-height: 32px;
 }
 
-.left__btn {
+.start__left__btn {
     padding: 19px 38px;
     color: #FFF;
     font-size: 16px;
@@ -237,6 +294,20 @@ body {
     line-height: normal;
     border: 3px solid #F90;
     background-color: transparent;
+    transition: background 0.3s ease-in-out ;
+}
+
+.start__left__btn:focus {
+    background: #F90;
+}
+
+.start__left__btn:hover {
+    background: #F90;
+}
+
+.start__left__btn:active {
+    background: #E1670E;
+    border-color: #E1670E;
 }
 
 .right__item {
@@ -296,12 +367,15 @@ body {
     left: 114px;
 }
 
+
+
 /* stages */
 .stages {
     padding: 100px 0 0;
 }
 
 .stages__wrapper {
+    width: 1770px;
     background-image: url(../img/stages.jpg);
     background-repeat: no-repeat;
     background-size: 870px 460px;
@@ -334,6 +408,19 @@ body {
     font-size: 16px;
     font-weight: 700;
     line-height: normal;
+    transition:  background 0.3s ease-in-out;
+}
+
+.stages__btn:focus {
+    background: #FFB84D;
+}
+
+.stages__btn:hover {
+    background: #FFB84D;
+}
+
+.stages__btn:active {
+    background: #E1670E;
 }
 
 .stages__btn-contract {
@@ -342,10 +429,29 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: normal;
-    border: 1px solid #000;
+    outline: 1px solid #000;
     background-color: transparent;
+    transition: background 0.3s ease-in-out,
+    outline 0.3s ease-in-out,
+    color 0.3s ease-in-out;
 }
 
+.stages__btn-contract:focus {
+    background: #666;
+    outline: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.stages__btn-contract:hover {
+    background: #666;
+    outline: none;
+    color: rgba(255, 255, 255, 1);
+}
+
+.stages__btn-contract:active {
+    background: #000;
+    color: rgba(255, 255, 255, 1);
+}
 
 /* questions */
 .questions {
@@ -404,19 +510,57 @@ body {
     margin-bottom: 20px;
 }
 
-.nav__item .nav__link {
+.nav__link {
     color: #CACACA;
     font-size: 18px;
     font-weight: 600;
     line-height: 36px;
+    transition: color 0.3s ease-in-out;
 }
 
-.nav__item:last-child {
+.nav__link:focus {
+    outline: 2px solid #F90;
+    outline-offset: 5px;
+}
+
+.nav__link:hover {
+    color: #F90;
+}
+
+.nav__link:active {
+    color: rgba(225, 103, 14, 1);
+    outline: none;
+}
+
+.footer__nav__item:last-child {
     margin-bottom: 90px;
 }
 
 .social__link:not(:last-child) {
     margin-right: 25px;
+}
+
+.social__link__svg {
+    fill: #666;
+    transition: fill 0.3s ease-in-out;
+}
+
+.social__link:focus {
+    outline: 2px solid #F90;
+    outline-offset: 5px;
+}
+
+.social__link:hover .social__link__svg {
+    fill: #F90;
+}
+
+.social__link:active {
+    outline: none;
+}
+
+.social__link:active .social__link__svg {
+    fill: rgba(225, 103, 14, 1);
+    outline: none;
 }
 
 .footer__logo__svg {
@@ -451,8 +595,22 @@ body {
     font-size: 16px;
     font-weight: 400;
     line-height: 32px;
-    background-color: #414141;
+    background-color: rgba(65, 65, 65, 1);
     border-radius: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.form__input:focus {
+    background-color: rgba(102, 102, 102, 1);
+}
+
+.form__input:hover {
+    background-color: rgba(102, 102, 102, 1);
+}
+
+.form__input:active {
+    background-color: rgba(102, 102, 102, 1);
+    color: rgba(255, 255, 255, 1);
 }
 
 .form__textarea {
@@ -467,24 +625,93 @@ body {
     line-height: 32px;
     background-color: #414141;
     border-radius: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.form__textarea:focus {
+    background-color: rgba(102, 102, 102, 1);
+}
+
+.form__textarea:hover {
+    background-color: rgba(102, 102, 102, 1);
+}
+
+.form__textarea:active {
+    background-color: rgba(102, 102, 102, 1);
+    color: rgba(255, 255, 255, 1);
 }
 
 .form__btn {
     padding: 19px 52px;
-    /* margin-right: 22px; */
+    margin-right: 11px;
     color: #FFF;
     font-size: 16px;
     font-weight: 700;
     line-height: normal;
+    transition: background 0.3s ease-in-out;
 }
 
-.form__check {
+.form__btn:focus {
+    background: #FFB84D;
+}
+
+.form__btn:hover {
+    background: #FFB84D;
+}
+
+.form__btn:active {
+    background: #E1670E;
+}
+
+.form__checkbox {
+    user-select: none;
+    cursor: pointer;
+}
+
+.form__checkbox__input {
+    appearance: none;
+    position: relative;
+}
+
+.form__checkbox__text {
     width: 261px;
+    position: relative;
+    padding-left: 18px;
     color: #CACACA;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 32px;
+}
+
+.form__checkbox__text::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    border: 1px solid rgba(202, 202, 202, 1);
+    transform: translateY(-50%);
+}
+
+.form__checkbox__text::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    background-image: url(../img/Check.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.form__checkbox__input:checked + .form__checkbox__text::after {
+    opacity: 1;
 }
 
 .footer__right__descr {
