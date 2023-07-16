@@ -82,10 +82,10 @@ body {
 }
 
 .container {
-    max-width: 1770px;
-    margin: 0 75px;
+    width: 1770px;
+    margin: 0 auto;
     padding: 0 15px;
-    width: 100%;
+    max-width: 100%;
 }
 
 .section-title {
@@ -110,7 +110,6 @@ body {
 
 /* header */
 .header {
-    width: 1920px;
     padding: 14px 75px ;
     border-radius: 0 0 32px 32px;
     box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.10);
@@ -120,8 +119,18 @@ body {
     justify-content: space-between;
 }
 
-.logo__svg {
+.logo__img {
+    min-width: unset;
     margin-right: 12.16px;
+}
+
+.logo__text {
+    min-width: unset;
+}
+
+.header__logo {
+    width: 225px;
+    align-items: center;
 }
 
 .header__nav {
@@ -179,7 +188,7 @@ body {
     outline: none;
 }
 
-.nav__search:active .nav__search__svg {
+/* .nav__search:active .nav__search__svg {
     fill: transparent;
     stroke-width: 2px;
     stroke: #000;
@@ -193,8 +202,7 @@ body {
 .start__wrapper {
     width: 1770px;
     min-height: 620px;
-    padding-left: 80px;
-    padding-top: 100px;
+    padding: 100px 853px 100px 80px;
     background-image: url(../img/start-bg.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -263,19 +271,20 @@ body {
 
 .about-us__left {
     width: 868px;
-    min-height: 622px;
     margin-right: 32px;
+    flex-direction: column;
+    justify-content: flex-end;
     background-image: url(../img/about-us-bg.jpg);
     background-repeat: no-repeat;
-    background-size: 868px 622px;
+    background-size: 868px 100%;
 }
 
 .left__wrapper {
     width: 868px;
     min-height: 196px;
-    padding: 50px 0 50px 50px;
-    margin-top: 426px;
+    padding: 50px 50px 50px 50px;
     align-items: center;
+    justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 32px;
 }
@@ -283,7 +292,6 @@ body {
 .left__descr {
     width: 433px;
     min-height: 96px;
-    margin-right: 160px;
     color: #FFF;
     font-size: 16px;
     font-weight: 700;
@@ -325,8 +333,7 @@ body {
     /* width: calc((100% - (var(--gap) * var(--offsets))) / (var(--offsets) + 1));; */
     width: 870px;
     min-height: 295px;
-    padding-left: 60px;
-    padding-top: 65px;
+    padding: 65px 120px 65px 60px;
     border: 1px solid #CACACA;;
     border-radius: 32px;
     box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.10);
@@ -336,8 +343,12 @@ body {
     margin-bottom: 32px;
 }
 
+.right__item__descr__wrapper {
+    flex-direction: column;
+}
+
 .right__title {
-    display: block;
+    margin: 0;
     width: 452px;
     min-height: 29px;
     margin-bottom: 8px;
@@ -348,6 +359,7 @@ body {
 }
 
 .right__descr {
+    margin: 0;
     width: 450px;
     min-height: 128px;
     color: #000;
@@ -387,7 +399,7 @@ body {
     width: 1770px;
     background-image: url(../img/stages.jpg);
     background-repeat: no-repeat;
-    background-size: 870px 460px;
+    background-size: 870px 100%;
     background-position: right center;
 }
 
@@ -404,10 +416,13 @@ body {
     line-height: 32px;
 }
 
-.stages__descr {
+.stages__decsr__wrapper {
     width: 758px;
+    height: 100%;
+}
+
+.stages__descr__p2 {
     margin-bottom: 18px;
-    min-height: 352px;
 }
 
 .stages__btn {
@@ -497,7 +512,7 @@ body {
 }
 
 .item__descr {
-    width: 450px;
+    margin: 0;
     color: #000;
     font-size: 16px;
     font-style: normal;
@@ -507,13 +522,11 @@ body {
 
 /* footer */
 .footer {
-    width: 1920px;
     padding: 50px 0 50px 0;
     background-color: rgba(0, 0, 0, 1);
 }
 
 .footer_container {
-    width: 1920px;
     justify-content: space-around;
     
 }
@@ -575,7 +588,7 @@ body {
     outline: none;
 }
 
-.footer__logo__svg {
+.footer__logo__img {
     margin-right: 12.16px;
 }
 
@@ -602,7 +615,7 @@ body {
     width: 570px;
     height: 60px;
     margin-bottom: 25px;
-    padding-left: 24px;
+    padding: 14px 328px 14px 24px;
     color: #CACACA;
     font-size: 16px;
     font-weight: 400;
@@ -629,8 +642,7 @@ body {
     width: 570px;
     height: 150px;
     margin-bottom: 32px;
-    padding-left: 24px;
-    padding-top: 14px;
+    padding: 14px 447px 104px 24px;
     color: #CACACA;
     font-size: 16px;
     font-weight: 400;
@@ -638,6 +650,11 @@ body {
     background-color: #414141;
     border-radius: 16px;
     transition: background-color 0.3s ease-in-out;
+}
+
+.form__textarea::placeholder {
+    width: 99px;
+    min-height: 32px;
 }
 
 .form__textarea:focus {
