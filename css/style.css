@@ -202,14 +202,14 @@ body {
 .start__wrapper {
     width: 1770px;
     min-height: 620px;
-    padding: 100px 853px 100px 80px;
+    padding: 100px 80px 100px 80px;
     background-image: url(../img/start-bg.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 .start__title {
-    width: 837px;
+    max-width: 837px;
     height: 170px;
     margin-bottom: 24px;
     color: #FFF;
@@ -220,7 +220,7 @@ body {
 }
 
 .start__descr {
-    width: 790px;
+    max-width: 790px;
     min-height: 58px;
     margin-bottom: 90px;
     color: #FFF;
@@ -260,7 +260,7 @@ body {
 }
 
 .about-us__descr {
-    width: 1235px;
+    max-width: 1235px;
     min-height: 192px;
     margin-bottom: 50px;
     color: #000;
@@ -276,7 +276,9 @@ body {
     justify-content: flex-end;
     background-image: url(../img/about-us-bg.jpg);
     background-repeat: no-repeat;
-    background-size: 868px 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 32px;
 }
 
 .left__wrapper {
@@ -290,7 +292,7 @@ body {
 }
 
 .left__descr {
-    width: 433px;
+    max-width: 433px;
     min-height: 96px;
     color: #FFF;
     font-size: 16px;
@@ -360,7 +362,7 @@ body {
 
 .right__descr {
     margin: 0;
-    width: 450px;
+    max-width: 450px;
     min-height: 128px;
     color: #000;
     font-size: 16px;
@@ -395,12 +397,27 @@ body {
     padding: 100px 0 0;
 }
 
-.stages__wrapper {
-    width: 1770px;
-    background-image: url(../img/stages.jpg);
+.box{
+    width: calc((100%/2) - (32px/2));
+    margin-right: 32px;
+}
+
+.box:last-child{
+    margin-right: 0;
+}
+
+.stages__div__left {
+    padding-right: 110px;
+}
+
+.stages__div__right {
+    min-height: 200px;
+    background-color: red;
+    background-image: url("../img/stages.jpg");
     background-repeat: no-repeat;
-    background-size: 870px 100%;
-    background-position: right center;
+    background-position: center;
+    background-size: cover;
+    border-radius: 32px;
 }
 
 .stages__title {
@@ -416,12 +433,7 @@ body {
     line-height: 32px;
 }
 
-.stages__decsr__wrapper {
-    width: 758px;
-    height: 100%;
-}
-
-.stages__descr__p2 {
+.stages__div__left__text {
     margin-bottom: 18px;
 }
 
@@ -504,7 +516,7 @@ body {
 .item__title {
     margin: 0;
     margin-bottom: 8px;
-    width: 412px;
+    max-width: 412px;
     color: #000;
     font-size: 24px;
     font-weight: 700;
@@ -615,7 +627,7 @@ body {
     width: 570px;
     height: 60px;
     margin-bottom: 25px;
-    padding: 14px 328px 14px 24px;
+    padding: 14px 24px;
     color: #CACACA;
     font-size: 16px;
     font-weight: 400;
@@ -642,7 +654,7 @@ body {
     width: 570px;
     height: 150px;
     margin-bottom: 32px;
-    padding: 14px 447px 104px 24px;
+    padding: 14px 24px;
     color: #CACACA;
     font-size: 16px;
     font-weight: 400;
@@ -744,7 +756,7 @@ body {
 }
 
 .footer__right__descr {
-    width: 363px;
+    max-width: 363px;
     min-height: 320px;
     color: #CACACA;
 }
