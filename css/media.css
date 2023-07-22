@@ -39,7 +39,7 @@
 @media (max-width: 1200px) {
 
     .header {
-        padding: 25px 35px;
+        padding: 25px 0;
     }
 
     .header__logo {
@@ -90,7 +90,7 @@
 
     .about-us {
         padding-top: 40px;
-        padding-left: 37px;
+        /* padding-left: 37px; */
     }
 
 
@@ -133,7 +133,7 @@
 
     .questions {
         padding-top: 88px;
-        padding-left: 37px;
+        /* padding-left: 37px; */
     }
 
     .questions__item {
@@ -187,7 +187,7 @@
 
 @media (max-width: 1024px) {
     .header {
-        padding: 12px 32px;
+        padding: 12px 0;
     }
 
     .header__logo {
@@ -413,20 +413,20 @@
     }
 
     .start__title {
-        max-width: 247px;
+        max-width: 100%;
         height: 49px;
         margin-bottom: 6px;
         font-size: 20px;
     }
 
     .start__descr {
-        width: 247px;
+        width: 100%;
         font-size: 12px;
         margin-bottom: 32px;
     }
 
     .start__wrapper {
-        max-width: 290px;
+        max-width: 100%;
         min-height: 308px;
         padding: 60px 22px 60px 22px;
         border-radius: 16px;
@@ -449,8 +449,8 @@
     }
 
     .about-us__descr {
-        width: 290px;
-        height: 672px;
+        width: 100%;
+        height: 100%;
         margin-bottom: 14px;
         font-size: 14px;
         line-height: 28px;
@@ -479,6 +479,7 @@
         background-image: url(../img/about-us-bg.jpg);
         background-size: 290px 200px;
         background-repeat: no-repeat;
+        background-position: center top;
     }
 
     .left__wrapper {
@@ -638,7 +639,7 @@
 
     .form__input,
     .form__textarea {
-        width: 290px;
+        width: 100%;
     }
 
     .form__accept {
@@ -647,13 +648,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     .form__btn {
         width: 162px;
+        margin: 0;
         margin-bottom: 11px;
         padding: 12.31px 19px;
-        margin-left: 64px;
         text-align: center;
         font-size: 12px;
         border-radius: 8px;
