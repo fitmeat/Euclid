@@ -416,6 +416,7 @@
 
     .item__link {
         font-size: 11px;
+        white-space: nowrap;
     }
 
     .nav__search {
