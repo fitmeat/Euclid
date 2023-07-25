@@ -384,6 +384,7 @@
     }
 
     .header__container {
+        padding: 0 15px;
         flex-direction: column;
         align-items: flex-start;
     }
@@ -400,6 +401,17 @@
 
     .header__nav {
         flex-direction: column-reverse;
+        position: static;
+        overflow-x: scroll;
+    }
+
+    .header__right {
+        max-width: 100%;
+        position: static;
+    }
+
+    .nav__list {
+        max-width: 100%;
     }
 
     .item__link {
@@ -708,3 +720,4 @@
     }
 
 }
+
