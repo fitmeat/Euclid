@@ -758,6 +758,10 @@ body {
     opacity: 1;
 }
 
+.form__checkbox__input:focus + .form__checkbox__text::before {
+    outline: 1px solid #E1670E;
+}
+
 .footer__right__descr {
     max-width: 363px;
     min-height: 320px;
