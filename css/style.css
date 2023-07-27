@@ -540,8 +540,9 @@ body {
 }
 
 .footer_container {
+    margin: 0;
+    padding: 0;
     justify-content: space-around;
-    
 }
 
 .footer__logo__wrapper {
