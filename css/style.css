@@ -540,9 +540,7 @@ body {
 }
 
 .footer_container {
-    margin: 0;
-    padding: 0;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .footer__logo__wrapper {
